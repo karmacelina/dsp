@@ -48,14 +48,13 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I am using Python 2.7 as installed thru Anaconda; I have an environment with Python 3.5 so I have access to that kernel. Python 3.5 doesn't have unicode text issues, so might be better for natural language applications? 
 
 ###Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+At the Terminal (on a Mac), type "which python"  (i.e.: $ which python) (which -a python can be used to get a list of the different versions of python available to use)
 
- 
 
 
