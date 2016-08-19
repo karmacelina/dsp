@@ -60,14 +60,13 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+>> I'm using nano. It's easy to use. 
 --
 
 ###Q2. Graphical Editor
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I have been using Sublime (I've used the Xcode text editor and TextWrangler before). I like the color-coding Sublime uses. It is my intention to get acquainted with its keyboard shortcuts, and to learn to customize it. Work in progress!
 
  
