@@ -13,7 +13,7 @@ these in a couple of hours.
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 1) pushd, 2) popd -- useful to move between directories; 3) mkdir -p path/to/follow <-- very useful to create "compound" path rather than making folders one-by-one
 
 ---
 
