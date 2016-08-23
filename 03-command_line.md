@@ -19,6 +19,7 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
  * both pushd and popd are useful to move between directories and keep them in "stack" -- used to move between directories currently in use.
 * mkdir -p path/to/follow <-- very useful to create "compound" path rather than making folders one-by-one
 * cp -r <-- command used to copy directories with files in them
+* less filename.extension <-- use to see the contents of filename.extension on the terminal. use up/down arrows to move page up or down, or use spacebar and w for the same functions. 
 
 ---
 
