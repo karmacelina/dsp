@@ -51,7 +51,8 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > * $ find . -name "*.txt" -type f -print | xargs rm 
+     * this will remove (rm) all files with extension .txt in the current directory
 
  
 
