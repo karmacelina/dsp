@@ -23,7 +23,9 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 * rm -rf non_empty_folder: recursive remove command used to delete the folder "non_empty_folder" and ALL of its contents. *** make sure you want to delete the folder before doing this! *** 
 * cat filename1 filename2 > new_file: concatenate contents of filename1 and filename2 and create a new file called new_file. 
 * pwd: Print Working Directory
-* chmod: [wiki link](https://en.wikipedia.org/wiki/Chmod) use to change access permissions to a file. USEFUL! 
+* chmod: [wiki link](https://en.wikipedia.org/wiki/Chmod) use to change access permissions to a file.
+
+
 ---
 
 ###Q2.  List Files in Unix   
