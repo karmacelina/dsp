@@ -22,7 +22,17 @@ Tuples will work as keys in dictionaries because they're immutable. Dictionary k
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python lists and sets are similar in that they can be iterated over, but they differ in that sets cannot be indexed, since they are unordered.
+
+>> sentence = "Today is a nice day for a walk"
+
+>> words = sentence.split()  # this is a list
+
+>> unique_words = set(words) # this is a set whose elements are the unique tokens of the sentence defined above
+
+>> Performance of sets for finding an element is faster  -- sets only contain each element once. 
+
+
 
 ---
 
