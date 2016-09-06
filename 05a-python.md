@@ -33,8 +33,10 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >> Lambda is an anonymous function than can be used without explicitly definining it. For example, it can be used to sort words (tokens) in a sentence:
 
 >> sentence = "My name is Laura del Mar and I had a birthday yesterday. I am 33 years old"
+
 >> words = sentence.split()
->> sorted(words, key = lambda word: word.lower())
+
+>> sorted(words, key = lambda word: word.lower()) , 
 
 >> rather than defining a function and calling it on the key argument.
 
