@@ -1,8 +1,12 @@
 # Matrix Algebra
 
 import sympy
-from sympy.interactive.printing import init_printing
-init_printing(use_unicode = False, wrap_line = False, no_global = True)
+
+# The following lines are useful if using Jupyter Notebooks
+
+#from sympy.interactive.printing import init_printing
+#init_printing(use_unicode = False, wrap_line = False, no_global = True)
+
 from sympy.matrices import *
 
 A = Matrix([[1, 2, 3], [2, 7, 4]])
