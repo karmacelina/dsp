@@ -60,7 +60,23 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions can be used to easily construct lists in Python. 
+
+>> example: evens_to_100 = [i for i in range(101) if i % 2 == 0] 
+>> equivalent to: evens_to_100 = filter(lambda x: x % 2 == 0, range(101))
+
+>> example: squares = [x**2 for x in [0,0,1,2,3,4]]
+>> equivalent to: squares = map(lambda x: x**2, [0,0,1,2,3,4])
+
+>> List comprehensions probably perform faster than equivalent statements using map or filter because no variables are kept after being used. 
+>> When you run something like: squares = map(lambda x: x**2, range(5)), the last value assigned to x is kept. 
+>> When you run squares = [x**2 for x in range(5)], x is not kept in memory. 
+
+>> Set comprehensions:
+>> example: squares_set = {x**2 for x in set([0,0,1,2,3,4])}
+
+>> Dictionary comprehensions: 
+>> example:  ** WORK HERE ** 
 
 ---
 
