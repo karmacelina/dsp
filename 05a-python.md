@@ -62,21 +62,25 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >> List comprehensions can be used to easily construct lists in Python. 
 
->> example: evens_to_100 = [i for i in range(101) if i % 2 == 0] 
->> equivalent to: evens_to_100 = filter(lambda x: x % 2 == 0, range(101))
+>> example: evens_to_100 = [i for i in range(101) if i % 2 == 0] is equivalent to: 
 
->> example: squares = [x**2 for x in [0,0,1,2,3,4]]
->> equivalent to: squares = map(lambda x: x**2, [0,0,1,2,3,4])
+>> evens_to_100 = filter(lambda x: x % 2 == 0, range(101))
 
->> List comprehensions probably perform faster than equivalent statements using map or filter because no variables are kept after being used. 
->> When you run something like: squares = map(lambda x: x**2, range(5)), the last value assigned to x is kept. 
->> When you run squares = [x**2 for x in range(5)], x is not kept in memory. 
+>> example: squares = [x**2 for x in [0,0,1,2,3,4]] is equivalent to: 
+
+>> squares = map(lambda x: x\*\*2, [0,0,1,2,3,4])
+
+>> * List comprehensions probably perform faster than equivalent statements using map or filter because no variables are kept after being used. 
+
+>> * When you run something like: squares = map(lambda x: x**2, range(5)), the last value assigned to x is kept. 
+
+>> * When you run squares = [x**2 for x in range(5)], x is not kept in memory. 
 
 >> Set comprehensions:
->> example: squares_set = {x**2 for x in set([0,0,1,2,3,4])}
+>> example: squares_set = {x\*\*2 for x in set([0,0,1,2,3,4])}
 
 >> Dictionary comprehensions: 
->> example:  ** WORK HERE ** 
+>> example:  <i> More work here.
 
 ---
 
