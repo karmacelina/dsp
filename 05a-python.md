@@ -64,15 +64,11 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >> example #1: 
 
->> evens_to_100 = [i for i in range(101) if i % 2 == 0] is equivalent to:
-
-evens_to_100 = filter(lambda x: x % 2 == 0, range(101))
+>> evens_to_100 = [i for i in range(101) if i % 2 == 0] is equivalent to: evens_to_100 = filter(lambda x: x % 2 == 0, range(101))
 
 >> example #2: 
 
->> squares = [x\*\*2 for x in [0,0,1,2,3,4]] is equivalent to:
-
-squares = map(lambda x: x\*\*2, [0,0,1,2,3,4])
+>> squares = [x\*\*2 for x in [0,0,1,2,3,4]] is equivalent to: squares = map(lambda x: x\*\*2, [0,0,1,2,3,4])
 
 >> * List comprehensions probably perform faster than equivalent statements using map or filter because no variables are kept after being used. 
 	* When you run something like: squares = map(lambda x: x\*\*2, range(5)), the last value assigned to x is kept. 
