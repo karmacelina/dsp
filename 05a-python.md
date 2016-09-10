@@ -82,7 +82,9 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >> Dictionary comprehensions:
 
->> example:  *WORK HERE!*
+>> example: 
+
+>> {x:x**2 for x in range(28) if x%3 == 0}
 
 ---
 
@@ -97,7 +99,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937 days between start and stop dates. 
 
 b.  
 ```
@@ -105,7 +107,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513 days between dates.
 
 c.  
 ```
@@ -113,7 +115,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850 days between dates.
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
