@@ -8,16 +8,13 @@ def donuts(count):
     form 'Number of donuts: <count>', where <count> is the number
     passed in. However, if the count is 10 or more, then use the word
     'many' instead of the actual count.
-
-    >>> donuts(4)
-    'Number of donuts: 4'
-    >>> donuts(9)
-    'Number of donuts: 9'
-    >>> donuts(10)
-    'Number of donuts: many'
-    >>> donuts(99)
-    'Number of donuts: many'
     """
+    
+    if count < 10:
+        return "Number of donuts: %r" % count
+    else:
+        return "many"
+
     raise NotImplementedError
 
 
@@ -27,16 +24,13 @@ def both_ends(s):
     2 chars of the original string, so 'spring' yields 'spng'.
     However, if the string length is less than 2, return instead the
     empty string.
-
-    >>> both_ends('spring')
-    'spng'
-    >>> both_ends('Hello')
-    'Helo'
-    >>> both_ends('a')
-    ''
-    >>> both_ends('xyz')
-    'xyyz'
     """
+
+    if len(s) >= 2:
+        return s[:2] + s[-2:]
+    else:
+        return ""
+
     raise NotImplementedError
 
 
@@ -46,16 +40,14 @@ def fix_start(s):
     first char have been changed to '*', except do not change the
     first char itself. e.g. 'babble' yields 'ba**le' Assume that the
     string is length 1 or more.
-
-    >>> fix_start('babble')
-    'ba**le'
-    >>> fix_start('aardvark')
-    'a*rdv*rk'
-    >>> fix_start('google')
-    'goo*le'
-    >>> fix_start('donut')
-    'donut'
     """
+
+    
+    S = s.replace(s[0], "*")
+    S = s[0] + S[1:]
+
+    return S
+
     raise NotImplementedError
 
 
@@ -74,6 +66,7 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
+    return b[:2] + a[2:], a[:2] + b[2:]
     raise NotImplementedError
 
 
@@ -91,6 +84,13 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
+    if len(s) >= 3:
+        if s[-3:] == 'ing':
+            return s + "ly"
+        else:
+            return s + 'ing'
+    else:
+        return s
     raise NotImplementedError
 
 
@@ -101,16 +101,17 @@ def not_bad(s):
     'not'...'bad' substring with 'good'. Return the resulting string.
     So 'This dinner is not that bad!' yields: 'This dinner is
     good!'
-
-    >>> not_bad('This movie is not so bad')
-    'This movie is good'
-    >>> not_bad('This dinner is not that bad!')
-    'This dinner is good!'
-    >>> not_bad('This tea is not hot')
-    'This tea is not hot'
-    >>> not_bad("It's bad yet not")
-    "It's bad yet not"
     """
+
+    if "not" in s and "bad" in s:
+        if s.find("bad") > s.find("not"):
+            S = s.replace(s[s.find("not"):s.find("bad") + len("bad")], "good")
+            return S
+        else: 
+            return s
+    else:
+        return s
+        
     raise NotImplementedError
 
 
@@ -122,12 +123,22 @@ def front_back(a, b):
     'abcde', the front half is 'abc', the back half 'de'. Given 2
     strings, a and b, return a string of the form a-front + b-front +
     a-back + b-back
-
-    >>> front_back('abcd', 'xy')
-    'abxcdy'
-    >>> front_back('abcde', 'xyz')
-    'abcxydez'
-    >>> front_back('Kitten', 'Donut')
-    'KitDontenut'
     """
+
+    if len(a) % 2 == 0:
+        a_front = a[:len(a)/2]
+        a_back = a[len(a)/2:]
+    else:
+        a_front = a[:(len(a) + 1)/2]
+        a_back = a[(len(a) + 1)/2:]
+        
+    if len(b) % 2 == 0:
+        b_front = b[:len(b)/2]
+        b_back = b[len(b)/2:]
+    else:
+        b_front = b[:(len(b) + 1)/2]
+        b_back = b[(len(b) + 1)/2:]
+    
+    return a_front + b_front + a_back + b_back
+
     raise NotImplementedError
