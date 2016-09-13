@@ -4,12 +4,11 @@
 import pandas as pd
 import re 
 
+# Read in the file using pandas
 path = 'faculty.csv'
-
 faculty = pd.read_csv(path)
 
-degrees = faculty[u' degree'].tolist()
-
+# Define a function to remove space and points from string elements of a list. 
 def remove_space_and_points(degrees):
 
     degrees_no_points = []
@@ -26,24 +25,35 @@ def remove_space_and_points(degrees):
 
     return degrees_no_points_no_spaces
 
+# Create list of degrees
+degrees = faculty[u' degree'].tolist() 
+
+# Apply function to the newly created list
 degrees_list = remove_space_and_points(degrees)
 
-# attempt to split degrees that have spaces
+# Split degrees that have spaces
+all_degrees = [] 
 for degree in degrees_list:
-	if " " in degree:
-		degree.split(" ")
+    if " " in degree:
+        for d in degree.split(" "):
+            all_degrees.append(d)
+    else:
+        all_degrees.append(degree)
 
+# Create dictionary to list and count frequency of different degrees.
 degrees_dict = {}
-for d in degrees_list :
-    v = degrees_list.count(d)
-    degrees_dict[d] = v  
+for d in all_degrees:
+    if d != '0': # add this to eliminate degree '0' from consideration
+        v = all_degrees.count(d)
+        degrees_dict[d] = v
 
-print degrees_dict
+
+print "There are %d different degrees." % len(degrees_dict.keys())
+print "\n"
+for (k,v) in degrees_dict.items():
+    print "%s : %d" % (k, v)
 print "\n"
 
-# I need to improve this one.  
-# Is there a way I can take the degrees that have multiple degrees in them 
-# and split them by " " space?
 
 # # # 
 
